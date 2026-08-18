@@ -6,9 +6,6 @@
     <title>How I work with AI</title>
     <script>
       (function () {
-        try {
-          if (sessionStorage.getItem("how-i-work-ai") === "ok") return;
-        } catch (e) {}
         document.documentElement.classList.add("is-locked");
       })();
     </script>
@@ -679,15 +676,26 @@ dont:
     <script>
       (function () {
         var HASH = "2f78473fe0379544af570a6f365979998d6cc1735fef0444da4684d6c99bd68f";
+        var HOUR = 60 * 60 * 1000;
         var form = document.getElementById("gate-form");
         var err = document.getElementById("gate-err");
+        var pass = document.getElementById("gate-pass");
+        var lockTimer = null;
         if (!form) return;
+
+        function lock() {
+          document.documentElement.classList.add("is-locked");
+          if (pass) pass.value = "";
+          if (err) err.hidden = true;
+          if (pass) pass.focus();
+        }
 
         function unlock() {
           document.documentElement.classList.remove("is-locked");
-          try {
-            sessionStorage.setItem("how-i-work-ai", "ok");
-          } catch (e) {}
+          if (pass) pass.value = "";
+          if (err) err.hidden = true;
+          if (lockTimer) window.clearTimeout(lockTimer);
+          lockTimer = window.setTimeout(lock, HOUR);
         }
 
         function hex(buf) {
