@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>How I work with AI</title>
-    <link rel="stylesheet" href="styles.css" />
     <script>
       (function () {
         try {
@@ -13,6 +12,28 @@
         document.documentElement.classList.add("is-locked");
       })();
     </script>
+    <style>
+      .gate {
+        display: none;
+      }
+      html.is-locked,
+      html.is-locked body {
+        height: 100%;
+        overflow: hidden;
+      }
+      html.is-locked .wrap,
+      html.is-locked .spot-bar {
+        display: none !important;
+      }
+      html.is-locked .gate {
+        display: flex !important;
+        min-height: 100vh;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+      }
+    </style>
+    <link rel="stylesheet" href="styles.css?v=lock" />
   </head>
   <body>
     <div class="gate" id="gate">
