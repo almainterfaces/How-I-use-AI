@@ -5,8 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>How I work with AI</title>
     <link rel="stylesheet" href="styles.css" />
+    <script>
+      (function () {
+        try {
+          if (sessionStorage.getItem("how-i-work-ai") === "ok") return;
+        } catch (e) {}
+        document.documentElement.classList.add("is-locked");
+      })();
+    </script>
   </head>
   <body>
+    <div class="gate" id="gate">
+      <form class="gate__card" id="gate-form">
+        <p class="who-title">How I work with AI</p>
+        <h1>Password</h1>
+        <p>This page is locked. Ask Amir for the password.</p>
+        <label class="gate__label" for="gate-pass">Password</label>
+        <input id="gate-pass" type="password" autocomplete="current-password" required />
+        <p class="gate__err" id="gate-err" hidden>Wrong password.</p>
+        <button type="submit">Open</button>
+      </form>
+    </div>
     <article class="wrap">
       <header class="mast">
         <div class="tags">
@@ -636,6 +655,43 @@ dont:
       <span class="spot-bar__rule" aria-hidden="true"></span>
       <button type="button" data-act="dismiss">Dismiss</button>
     </div>
+    <script>
+      (function () {
+        var HASH = "6a6278310a153fe4ac8d438cc3c5b8b26809b95c94fd9106c5e8d7aa5f8170e1";
+        var form = document.getElementById("gate-form");
+        var err = document.getElementById("gate-err");
+        if (!form) return;
+
+        function unlock() {
+          document.documentElement.classList.remove("is-locked");
+          try {
+            sessionStorage.setItem("how-i-work-ai", "ok");
+          } catch (e) {}
+        }
+
+        function hex(buf) {
+          return Array.from(new Uint8Array(buf))
+            .map(function (b) {
+              return b.toString(16).padStart(2, "0");
+            })
+            .join("");
+        }
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          var value = document.getElementById("gate-pass").value;
+          crypto.subtle
+            .digest("SHA-256", new TextEncoder().encode(value))
+            .then(function (buf) {
+              if (hex(buf) === HASH) {
+                unlock();
+              } else if (err) {
+                err.hidden = false;
+              }
+            });
+        });
+      })();
+    </script>
     <script>
       (function () {
         var bar = document.getElementById("spot-bar");

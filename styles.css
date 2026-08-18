@@ -529,3 +529,80 @@ footer.colophon {
     font-size: 15px;
   }
 }
+
+html.is-locked,
+html.is-locked body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.gate {
+  display: none;
+}
+
+html.is-locked .wrap,
+html.is-locked .spot-bar {
+  display: none;
+}
+
+html.is-locked .gate {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.gate__card {
+  width: 100%;
+  max-width: 400px;
+}
+
+.gate__card h1 {
+  margin: 0 0 12px;
+}
+
+.gate__card p {
+  color: var(--mute);
+  margin: 0 0 20px;
+}
+
+.gate__label {
+  display: block;
+  font-family: var(--mono);
+  font-size: var(--text-label);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--faint);
+  margin-bottom: 8px;
+}
+
+.gate input {
+  display: block;
+  width: 100%;
+  font-family: var(--serif);
+  font-size: var(--text-body);
+  padding: 10px 12px;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.gate button {
+  font-family: var(--mono);
+  font-size: var(--text-caption);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: var(--ink);
+  color: var(--paper);
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+.gate__err {
+  color: var(--hold);
+  font-family: var(--mono);
+  font-size: var(--text-caption);
+}
