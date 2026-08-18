@@ -572,7 +572,6 @@ html.is-locked .gate {
   font-family: var(--mono);
   font-size: var(--text-label);
   letter-spacing: 0.08em;
-  text-transform: uppercase;
   color: var(--faint);
   margin-bottom: 8px;
 }
