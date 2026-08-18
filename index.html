@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>How I work with AI</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <article class="wrap">
+      <header class="mast">
+        <div class="tags">
+          <span>How I work with AI</span>
+        </div>
+        <h1>To whom it may concern.</h1>
+        <p class="lede">
+          You asked how I work with AI. Below are answers to your questions. Some of the answers reference my lottery case study with more details. Each answer as link to more details in the lottery case study.
+        </p>
+      </header>
+
+      <section id="short-version">
+        <p class="who-title">Abstract</p>
+        <p>
+          Short answers to the questions you asked. Each link jumps to the matching part of the case study.
+        </p>
+        <p class="where"><a href="#the-week">Skip to the case study</a></p>
+        <div class="qa">
+
+          <article>
+            <h3>Walk me through how AI has fundamentally changed your design workflow?</h3>
+            <p>
+              Before AI I spent the week on notes, drawings, and Figma. Nobody could click a real screen at the end.
+            </p>
+            <p>
+              Claude and Cursor now make those screens. I spend time on the problem, the rules, whether people can use it, and whether it is worth building.
+            </p>
+            <p>
+              Same morning the team can look at the steps. Same week people can click a real screen that engineers can build from.
+            </p>
+            <p class="where">Source: <a href="#faster">What used to take days</a></p>
+          </article>
+          <article>
+            <h3>Give me some examples of AI-driven products you have worked on?</h3>
+            <p>
+              Command Center is a work screen I designed at OLG, a big lottery company in North America.
+            </p>
+            <p>
+              People use it at work now. Call time dropped by more than half. It is not a chat bot.
+            </p>
+            <p>
+              The employee can click the number and open the real bill. They do not hunt through four programs.
+            </p>
+            <p>
+              The AI can write a letter. It cannot send it. The employee presses Approve.
+            </p>
+            <p>
+              If they Approve without reading, the design failed.
+            </p>
+            <p class="where">Source: <a href="#the-screen">The lottery bill screen</a></p>
+          </article>
+          <article>
+            <h3>Tell me about a project where you used agentic AI from problem statement to working prototype.</h3>
+            <p>
+              A store owner called. Why is March $4,382 higher? The employee had four programs open. The call took about eight minutes. A customer was waiting.
+            </p>
+            <p>
+              I put the real notes, how those four programs work today, and one page of rules into Cursor. I did not draw the app in Figma first.
+            </p>
+            <p>
+              The first thing it built was a chat bot. Wrong. The employee needs one work screen on the phone, with chat on the side.
+            </p>
+            <p>
+              I kept saying no to chat windows. A week later Command Center was a screen you can click. People use it at work now.
+            </p>
+            <p class="where">Source: <a href="#first-build">The chatbot I threw out</a></p>
+          </article>
+          <article>
+            <h3>Which AI tools are you using today, and what do you use each for?</h3>
+            <p>
+              Claude reads the files and helps me think. Cursor Plan writes a plan I can say no to.
+            </p>
+            <p>
+              Cursor Agent builds the screens after I say yes. Figma holds the colors, type, and layout.
+            </p>
+            <p>
+              Later I polish the look in Figma and send it back to Cursor. Engineers get a working screen, not Figma frames to inspect.
+            </p>
+            <p class="where">Source: <a href="#tools">What each tool is for</a></p>
+          </article>
+          <article>
+            <h3>Give me a specific example where AI reduced your design cycle time. What was the before-and-after?</h3>
+            <p>
+              Before: days to draw how the job works today vs how it should work. Still nothing to click. Each extra product was weeks in Figma.
+            </p>
+            <p>
+              After: same morning a map of the steps. Next day a screen in code I can test with people.
+            </p>
+            <p class="where">Source: <a href="#faster">What used to take days</a></p>
+          </article>
+          <article>
+            <h3>Tell me about a design system you've built and how you would structure it so AI can reliably use it?</h3>
+            <p>
+              I have made a set of named colors and parts. For this work I named them so Cursor could follow, plus rules for what not to do.
+            </p>
+            <p>
+              Same name in Figma and in code. If the AI has to guess the look, the names and rules are not ready.
+            </p>
+            <p class="where">Source: <a href="#design-system">How I wrote the design system</a></p>
+          </article>
+          <article>
+            <h3>How do you validate AI-assisted designs with real customers?</h3>
+            <p>
+              Same test as any product. Give lottery staff a real job and watch. Explain why March is $4,382 more. Fix three lottery tickets that are wrong. Press Approve.
+            </p>
+            <p>
+              Watch if they read where the number came from, or click Approve without reading. We tested with staff. Not with store owners.
+            </p>
+            <p class="where">Source: <a href="#test">How we tested it</a></p>
+          </article>
+          <article>
+            <h3>Tell me about a time you introduced an AI tool or workflow to other designers. What changed?</h3>
+            <p>
+              I have not run a class. I sit with designers on a real job. I pick a boring repeated task, show a working screen, and we decide together if AI belongs there.
+            </p>
+            <p class="where">Source: <a href="#pairing">Pairing, not a lunch-and-learn</a></p>
+          </article>
+          <article>
+            <h3>If you joined my client tomorrow, what would you look at first to determine where AI could compress their design process?</h3>
+            <p>
+              I would not start with a tool. I would start with the business: what is broken, which number is stuck, and what hurts the people doing the job.
+            </p>
+            <p>
+              Then I put that, plus the real files, into Claude. Then we build something you can click and test. I would not start by adding a chat bot.
+            </p>
+            <p class="where">Source: <a href="#join">What I would look at first</a></p>
+          </article>
+
+        </div>
+      </section>
+
+      <section id="the-week" class="mast">
+        <div class="tags">
+          <span>OLG lottery finance</span>
+          <span>Live</span>
+          <span>One week</span>
+        </div>
+        <h2>Staff had four programs open to explain a $4,382 bill. I used AI to make one screen instead.</h2>
+        <p class="lede">
+          Lottery stores get a bill. One bill jumped by $4,382. The owner called. The employee had to hunt across four programs while a customer waited at the store.
+        </p>
+        <p>
+          I spent a week building one screen for that employee. People use it at work now. Call time dropped by more than half.
+        </p>
+        <p>
+          The AI can write a letter or a ticket fix. It cannot send the letter or change the tickets. The employee presses Approve.
+        </p>
+        <p>
+          I used AI to build faster. I did not let it make up a source or turn the product into a chat bot.
+        </p>
+      </section>
+
+      <div class="intro">
+        <p class="who-title">Who’s who</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Person</th>
+                <th>What they do</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Store owner</td>
+                <td>Sells lottery tickets. Calls about the bill. They are on the phone, not on this screen.</td>
+              </tr>
+              <tr>
+                <td>Customer at the store</td>
+                <td>Waiting to buy a ticket.</td>
+              </tr>
+              <tr>
+                <td>Lottery employee</td>
+                <td>Answers the call. Looks up the bill. Presses Approve. Command Center is their screen.</td>
+              </tr>
+              <tr>
+                <td>Me</td>
+                <td>Designed Command Center. Set what the AI may not do. People use it at work now.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <section id="the-call">
+        <h2>The store owner called. The bill was $4,382 too high.</h2>
+        <p class="said">“Why is March higher?”</p>
+        <p>
+          <mark class="spot">A store owner is on the phone with the lottery company. A customer is waiting at their counter. If this takes eight minutes, that customer leaves.</mark>
+        </p>
+        <p>
+          The lottery employee used to open four programs to answer: bill, tickets, reports, help desk. They do not show the same numbers.
+        </p>
+        <p>
+          March is up $4,382. Stores also sell sports tickets. That extra line is what made the bill jump. Nobody could say that on the phone without switching programs.
+        </p>
+        <p>
+          A new app would have been a fifth program to open on the call. This week I built one screen for the employee instead. People use it at work now. Call time dropped by more than half.
+        </p>
+        <figure class="shot">
+          <div class="frame" role="img" aria-label="Four programs open during a bill call">
+            <svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg">
+              <rect width="720" height="300" fill="#f4f4f7"/>
+              <text x="36" y="42" fill="#8b8b96" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1.2">THE CALL · FOUR PROGRAMS</text>
+              <text x="36" y="78" fill="#121214" font-family="Libre Baskerville, Georgia, serif" font-size="22" font-weight="700">“Why is March higher?”</text>
+              <text x="36" y="108" fill="#5a5a63" font-family="Libre Baskerville, Georgia, serif" font-size="14">The employee hunts. The store owner waits. A customer is at the counter.</text>
+              <rect x="36" y="140" width="150" height="118" rx="8" fill="#fff" stroke="#e8e8ee"/>
+              <text x="52" y="166" fill="#8b8b96" font-family="IBM Plex Mono, monospace" font-size="10">BILL APP</text>
+              <text x="52" y="198" fill="#121214" font-family="Libre Baskerville, Georgia, serif" font-size="16" font-weight="700">$18,440</text>
+              <text x="52" y="222" fill="#b45309" font-family="Libre Baskerville, Georgia, serif" font-size="12">March +$4,382</text>
+              <rect x="202" y="140" width="150" height="118" rx="8" fill="#fff" stroke="#e8e8ee"/>
+              <text x="218" y="166" fill="#8b8b96" font-family="IBM Plex Mono, monospace" font-size="10">TICKET APP</text>
+              <text x="218" y="198" fill="#121214" font-family="Libre Baskerville, Georgia, serif" font-size="16" font-weight="700">RL-45218</text>
+              <text x="218" y="222" fill="#5a5a63" font-family="Libre Baskerville, Georgia, serif" font-size="12">Sports ticket</text>
+              <rect x="368" y="140" width="150" height="118" rx="8" fill="#fff" stroke="#e8e8ee"/>
+              <text x="384" y="166" fill="#8b8b96" font-family="IBM Plex Mono, monospace" font-size="10">REPORTS</text>
+              <text x="384" y="198" fill="#121214" font-family="Libre Baskerville, Georgia, serif" font-size="16" font-weight="700">4 apps</text>
+              <text x="384" y="222" fill="#5a5a63" font-family="Libre Baskerville, Georgia, serif" font-size="12">Numbers disagree</text>
+              <rect x="534" y="140" width="150" height="118" rx="8" fill="#fff" stroke="#e8e8ee"/>
+              <text x="550" y="166" fill="#8b8b96" font-family="IBM Plex Mono, monospace" font-size="10">HELP DESK</text>
+              <text x="550" y="198" fill="#121214" font-family="Libre Baskerville, Georgia, serif" font-size="16" font-weight="700">On hold</text>
+              <text x="550" y="222" fill="#5a5a63" font-family="Libre Baskerville, Georgia, serif" font-size="12">Owner waiting</text>
+            </svg>
+          </div>
+          <figcaption>Four programs open. That is eight minutes to answer one bill question.</figcaption>
+        </figure>
+      </section>
+
+      <section id="the-screen">
+        <h2>Command Center is one screen for the employee on the call.</h2>
+        <p>
+          Work is on the left. Chat is on the right. Chat helps. It is not the product.
+        </p>
+        <p>
+          The store owner asks why March is higher. The employee needs a sentence they can read back. Sports ticket <code>RL-45218</code>. $4,382. It came from the bill program.
+        </p>
+        <p>
+          <mark class="spot">They click that source and open the real bill. If they cannot click it, they go back to the four programs.</mark>
+        </p>
+        <figure class="shot">
+          <img src="assets/11-command-idle.png" alt="Command Center with work on the left and chat on the right" />
+          <figcaption>Work on the left. Chat on the right. Chat helps. It is not the product.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/12-variance-thread.png" alt="Answer showing ticket RL-45218, 4382, and where it came from" />
+          <figcaption>Ticket RL-45218. $4,382. The answer says where that number came from.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/13-source-card.png" alt="The billing record after clicking the source" />
+          <figcaption>The real billing record after the employee clicks the source.</figcaption>
+        </figure>
+      </section>
+
+      <section id="approve">
+        <h2>The letter and tickets do not change until the employee presses Approve.</h2>
+        <p>
+          The AI can write a letter or a ticket fix. It cannot send the letter or change the tickets. <mark class="spot">Approve is a button only a person can press.</mark>
+        </p>
+        <p>
+          A store payment fails. The bank said no. The lottery company has to tell the store. The AI can write that letter.
+        </p>
+        <p>
+          The letter stays on Hold. The employee reads it, edits if needed, then presses Approve. Until then the store never sees it.
+        </p>
+        <figure class="shot">
+          <img src="assets/14-nsf-ingest.png" alt="A letter about a failed store payment, still on Hold" />
+          <figcaption>The word Hold. The letter exists. The store has not received it.</figcaption>
+        </figure>
+        <p>
+          Example: a list of tickets is wrong. The AI can line up the fixes. Same rule. The employee checks the list, then presses Approve. The tickets do not change until that click.
+        </p>
+        <figure class="shot">
+          <img src="assets/14-batch-review.png" alt="A list of ticket fixes waiting for Approve" />
+          <figcaption>The fixes sit and wait. Approve is still a person clicking a button.</figcaption>
+        </figure>
+        <p class="so">
+          If the employee presses Approve without reading, the design failed. Even if the number was right.
+        </p>
+      </section>
+
+      <section id="workshop">
+        <h2>Staff already said they do not want another login.</h2>
+        <p>
+          Before any screens, staff wrote what hurts on a board. The job was already four programs and a phone call. I did not start by drawing a new app in Figma.
+        </p>
+        <p>
+          <mark class="spot">They do not want another login. They want the four programs they already have to stop showing different numbers.</mark>
+        </p>
+        <figure class="shot">
+          <img src="assets/03-workshops.png" alt="Workshop board used before any screens" />
+          <figcaption>Workshop board. The call, written down, before any screens.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/06-user-insights.png" alt="Insight that they do not want another login" />
+          <figcaption>The line about not wanting another login. That is why I did not design another app.</figcaption>
+        </figure>
+        <p>
+          After that I wrote one page: who gets hurt if the AI is wrong, what it may do, what it must never do, who presses Approve.
+        </p>
+        <p>
+          Cursor did not start building until that page existed.
+        </p>
+      </section>
+
+      <section id="files">
+        <h2>I loaded the real files before I asked for screens.</h2>
+        <p>
+          A blank chat that says “design a lottery tool” makes one up. <mark class="spot">I loaded the real files first: notes, the four programs they already use, and a list of things the AI must not do.</mark>
+        </p>
+        <p>
+          Bill. Tickets. Reports. Help desk. Those already exist. The new screen has to work with them, not replace them.
+        </p>
+        <figure class="shot">
+          <img src="assets/02-claude-setup.png" alt="Claude project filled with real OLG files" />
+          <figcaption>Files on the left. Notes went in before I asked for a screen.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/04-introduce-apps.png" alt="List of the four programs that already exist" />
+          <figcaption>The four programs already exist. The AI does not get to invent a fifth program.</figcaption>
+        </figure>
+      </section>
+
+      <section id="figjam">
+        <h2>I used Claude to map the steps of the job.</h2>
+        <p>
+          I still do not jump to a clickable screen. I need how the job works today, and how it should work. Workshop notes went into Claude. The steps went onto a FigJam board the same morning.
+        </p>
+        <p>
+          <mark class="spot">That used to take days. The team can say no to a direction the same morning.</mark>
+        </p>
+        <p>
+          This board is Instant Products, a games list, not the $4,382 bill. It shows the method. That afternoon Cursor started building.
+        </p>
+        <figure class="shot">
+          <img src="assets/07-figjam-flow.png" alt="FigJam user flow for Instant Products games list, used as the method not as the lottery bill" />
+          <figcaption>Instant Products games list, not the $4,382 call. The team can say no to this the same morning.</figcaption>
+        </figure>
+      </section>
+
+      <section id="first-build">
+        <h2>The first pass was a chat bot. I threw it out.</h2>
+        <p>
+          That afternoon I pointed Cursor at the notes and the steps. Cursor made the screens. I reviewed them. <mark class="spot">The first Command Center was a chat bot with extra buttons.</mark>
+        </p>
+        <p>
+          Easy to send out by mistake. I said no. Five pages only. A sixth page meant the AI was making one up.
+        </p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Section</th>
+                <th>What the employee does</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Command</td>
+                <td>Home. See today’s work.</td>
+              </tr>
+              <tr>
+                <td>Ingest</td>
+                <td>Bring in the bills and tickets.</td>
+              </tr>
+              <tr>
+                <td>Exceptions</td>
+                <td>Check things that look wrong.</td>
+              </tr>
+              <tr>
+                <td>NSF</td>
+                <td>A store’s payment did not go through.</td>
+              </tr>
+              <tr>
+                <td>Batch</td>
+                <td>Fix a list of tickets at once.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          Chat stays on the side. Approve stays a person. Cursor made the screens. I threw out the chat bot.
+        </p>
+      </section>
+
+      <section id="tools">
+        <h2>What each tool is for</h2>
+        <p>
+          <mark class="spot">Each tool has one job. Claude thinks. Cursor Plan is a plan I can say no to. Cursor Agent builds after I say yes. Figma holds the look.</mark>
+        </p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Tool</th>
+                <th>What I use it for</th>
+                <th>What I never let it do</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Claude</td>
+                <td>Read the files. Help me think</td>
+                <td>Make screens</td>
+              </tr>
+              <tr>
+                <td>Cursor Plan</td>
+                <td>Write a plan I can say no to</td>
+                <td>Start building</td>
+              </tr>
+              <tr>
+                <td>Cursor Agent</td>
+                <td>Build what I already said yes to</td>
+                <td>Add a page I did not ask for</td>
+              </tr>
+              <tr>
+                <td>Figma</td>
+                <td>The look: colors, type, layout</td>
+                <td>Make up a look the code does not have</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          I do not use any of these to talk to people. They cannot send a letter or change a ticket. Only the employee presses Approve.
+        </p>
+      </section>
+
+      <section id="pairing">
+        <h2>I sit next to people. I do not run a class.</h2>
+        <p>
+          I have not run a class. <mark class="spot">I show this by sitting next to someone on a real job.</mark>
+        </p>
+        <p>
+          We look at a screen you can click, not a Figma drawing. The question is: can the employee do the job? Not: should this box move one pixel.
+        </p>
+      </section>
+
+      <section id="design-system">
+        <h2>I wrote names and rules so Cursor would not guess.</h2>
+        <p>
+          A designer can look at a blue and remember: that is for the main button. An AI cannot remember that. It needs the name written down, and a rule for when not to use it.
+        </p>
+        <p>
+          If I only write “use a blue button,” the AI guesses which blue. Then the design comes out the wrong color.
+        </p>
+        <p>
+          This week I wrote those names. <mark class="spot">Same word in Figma and in code. Cursor builds the page from small parts. I do not hand it a finished drawing.</mark>
+        </p>
+        <p>
+          Color names first. <mark class="spot">Each name says when to use it, and when not to.</mark>
+        </p>
+        <pre id="snippets"><code>{
+  "color.text.ai": {
+    "value": "{primitive.blue.400}",
+    "layer": "token",
+    "intent": "AI is speaking",
+    "useFor": ["Command thread", "AI kicker"],
+    "avoidFor": ["primary button", "links", "success"]
+  },
+  "color.background.hold": {
+    "value": "{primitive.amber.950}",
+    "layer": "token",
+    "intent": "money or a ticket is waiting on a person",
+    "useFor": ["Hold badge", "NSF letter"],
+    "avoidFor": ["success", "decoration"]
+  },
+  "color.action.primary": {
+    "value": "{primitive.indigo.500}",
+    "layer": "token",
+    "intent": "the main button",
+    "useFor": ["Approve", "Create"],
+    "avoidFor": ["AI chrome", "delete"]
+  }
+}</code></pre>
+        <p>
+          If a button uses a raw color code instead of a name, the naming failed.
+        </p>
+        <p>
+          Next, a button. Figma and code use the same word for each setting.
+        </p>
+        <pre><code>// button.content.ts  (contract before TSX)
+
+export const buttonContent = {
+  layer: "atom",
+  intent: "a person takes an action",
+  figma: "Button/{primary|secondary|ghost|danger}",
+  builtFrom: ["tokens"],
+  props: {
+    variant: ["primary", "secondary", "ghost", "danger"],
+    disabled: [false, true],
+    loading: [false, true]
+  },
+  tokens: [
+    "color.action.primary",
+    "color.text.on-accent"
+  ],
+  codeExample: 'import { Button } from "@olg/ui"',
+  a11y: "name the action. Approve, not Submit."
+};
+
+// Figma says disabled. Code says disabled. Not isDisabled.
+type ButtonProps = {
+  variant: "primary" | "secondary" | "ghost" | "danger";
+  disabled?: boolean;
+  loading?: boolean;
+  children: React.ReactNode;
+};</code></pre>
+        <p>
+          Same word. <code>disabled</code>, not <code>isDisabled</code>.
+        </p>
+        <p>
+          Then a small card for the bill. Cursor uses cards like this to build the page. It does not invent a new page.
+        </p>
+        <pre><code>// record-card.content.ts  (molecule)
+
+export const recordCardContent = {
+  layer: "molecule",
+  intent: "show the record the AI used, and make it clickable",
+  builtFrom: ["tokens", "Text", "Badge", "Button"],
+  do: [
+    "always show system name and id",
+    "click opens the real record"
+  ],
+  dont: [
+    "invent a source",
+    "show a total with no citation"
+  ]
+};</code></pre>
+        <p>
+          Then a short rules file for Cursor. Use the parts that exist. Do not draw a new button. Do not make up a sixth page.
+        </p>
+        <pre><code># AGENTS.md
+
+You compose pages from @olg/ui.
+You do not invent chrome.
+
+- Import atoms and molecules. Never redraw a Button.
+- Tokens first, then atoms, then molecules, then the page.
+- Figma property names ARE the props. Do not rename.
+- No raw hex. No new dialog if one exists.
+- No sixth menu name.
+- Command Center is a page, not a new chat kit.
+- Chat stays on the side. Approve is a person.
+
+Fail:
+  import { Button } from "@olg/ui"  missing
+  color: "#6b86ef"                  in a component
+  &lt;div className="chat-app"&gt;        instead of Command page</code></pre>
+        <figure class="shot">
+          <img src="assets/15-catalog-command.png" alt="Command Center page written as a list of parts" />
+          <figcaption>Command Center as a list of parts. Cursor builds it from those parts. It does not get a new chat bot.</figcaption>
+        </figure>
+        <p>
+          Last, a short list for Command Center. So a later pass cannot turn it back into a chat bot.
+        </p>
+        <pre><code># command-center.page.yaml
+
+layer: page
+builtFrom:
+  - tokens
+  - Button
+  - RecordCard
+  - HoldBadge
+do:
+  - cite the source and make it clickable
+  - keep chat on the side
+  - Approve is a person
+dont:
+  - invent a sixth menu name
+  - invent a new dialog when one exists
+  - pair hold-amber with success
+  - use AI blue on a primary button
+  - do anything without Approve</code></pre>
+      </section>
+
+      <section id="test">
+        <h2>We tested it as a live call.</h2>
+        <p>
+          <mark class="spot">I ran the call myself first. Then lottery staff used the clickable screen. We did not test with store owners.</mark>
+        </p>
+        <p>
+          Same test as any product: a real job, watch them do it. Explain why March is $4,382 more. Fix three lottery tickets that are wrong. Press Approve.
+        </p>
+        <p>
+          “It went fine” is not a result. Can they read the source to the store owner? Can they refuse Approve? Watch if they Approve without reading. That is a failed AI moment, not a fast one.
+        </p>
+        <figure class="shot">
+          <img src="assets/16-batch-repair.png" alt="Ticket repair screen with Approve still required" />
+          <figcaption>Ticket repair. Approve is still a person clicking a button.</figcaption>
+        </figure>
+      </section>
+
+      <section id="faster">
+        <h2>The drawing week got shorter. The hard thinking did not.</h2>
+        <p>
+          Drawing how the job works today vs how it should work used to take days, with nothing to click. Workshop notes now go into Claude. The steps land in FigJam the same morning.
+        </p>
+        <p>
+          Cursor can make a screen that afternoon. <mark class="spot">Same morning the team can look at a direction. Same week staff can try it.</mark>
+        </p>
+        <p>
+          Nine other products existed only as Word docs. Only finance had a working screen. Before AI, each extra product was weeks in Figma.
+        </p>
+        <p>
+          I gave Cursor the finance screen plus those docs. Same week: named parts other products could reuse. We could still show the live finance screen.
+        </p>
+        <p>
+          Naming the problem did not get faster. Writing the rules did not get faster.
+        </p>
+        <p>
+          The employee still has to read before they Approve. That step should not get faster.
+        </p>
+        <p id="join">
+          If I joined a team tomorrow, I would not start with a chat bot. <mark class="spot">I would start with the business: what is broken, which number is stuck, and what hurts the people doing the job. I would put that, plus the real files, into Claude.</mark>
+        </p>
+        <p>
+          Then I would look for the slow step in the design week, and whether names are clear enough for an AI to follow.
+        </p>
+      </section>
+
+    </article>
+    <div class="spot-bar" id="spot-bar">
+      <button type="button" data-act="back">Go back</button>
+      <span class="spot-bar__rule" aria-hidden="true"></span>
+      <button type="button" data-act="dismiss">Dismiss</button>
+    </div>
+    <script>
+      (function () {
+        var bar = document.getElementById("spot-bar");
+        var fromEl = null;
+        var fromY = 0;
+
+        function findSpot(id) {
+          var el = document.getElementById(id);
+          if (!el) return null;
+          if (el.matches("mark.spot")) return el;
+          var inner = el.querySelector("mark.spot");
+          if (inner) return inner;
+          var prev = el.previousElementSibling;
+          if (prev) {
+            if (prev.matches("mark.spot")) return prev;
+            var nested = prev.querySelector("mark.spot");
+            if (nested) return nested;
+          }
+          return null;
+        }
+
+        function placeBar(mark) {
+          var r = mark.getBoundingClientRect();
+          var br = bar.getBoundingClientRect();
+          var h = br.height || 40;
+          var w = br.width || 180;
+          var top = r.top - h - 8;
+          var left = r.left;
+          if (left + w > window.innerWidth - 16) {
+            left = window.innerWidth - w - 16;
+          }
+          if (top < 8) {
+            top = r.bottom + 8;
+          }
+          bar.style.top = top + "px";
+          bar.style.left = Math.max(8, left) + "px";
+        }
+
+        function clearSpot() {
+          document.querySelectorAll("mark.spot.is-on").forEach(function (el) {
+            el.classList.remove("is-on");
+          });
+          bar.classList.remove("is-open");
+        }
+
+        function light(id) {
+          var mark = findSpot(id);
+          if (!mark) return;
+          clearSpot();
+          mark.classList.add("is-on");
+          bar.classList.add("is-open");
+          requestAnimationFrame(function () {
+            placeBar(mark);
+            mark.scrollIntoView({ block: "center", behavior: "smooth" });
+            requestAnimationFrame(function () {
+              placeBar(mark);
+            });
+          });
+        }
+
+        function goBack() {
+          clearSpot();
+          if (fromEl && document.contains(fromEl)) {
+            fromEl.scrollIntoView({ block: "center", behavior: "smooth" });
+            fromEl.focus({ preventScroll: true });
+          } else {
+            window.scrollTo({ top: fromY, behavior: "smooth" });
+          }
+          if (location.hash) {
+            history.replaceState(null, "", location.pathname + location.search);
+          }
+        }
+
+        bar.addEventListener("click", function (e) {
+          var btn = e.target.closest("button");
+          if (!btn) return;
+          if (btn.getAttribute("data-act") === "back") goBack();
+          if (btn.getAttribute("data-act") === "dismiss") {
+            clearSpot();
+            if (location.hash) {
+              history.replaceState(null, "", location.pathname + location.search);
+            }
+          }
+        });
+
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") {
+            clearSpot();
+            if (location.hash) {
+              history.replaceState(null, "", location.pathname + location.search);
+            }
+          }
+        });
+
+        window.addEventListener("scroll", function () {
+          var on = document.querySelector("mark.spot.is-on");
+          if (on && bar.classList.contains("is-open")) placeBar(on);
+        }, { passive: true });
+
+        window.addEventListener("resize", function () {
+          var on = document.querySelector("mark.spot.is-on");
+          if (on && bar.classList.contains("is-open")) placeBar(on);
+        });
+
+        document.addEventListener("click", function (e) {
+          var a = e.target.closest(".where a[href^='#']");
+          if (!a) return;
+          var id = (a.getAttribute("href") || "").slice(1);
+          if (!id || !findSpot(id)) return;
+          e.preventDefault();
+          fromEl = a;
+          fromY = window.scrollY;
+          history.replaceState(null, "", "#" + id);
+          light(id);
+        });
+
+        if (location.hash) {
+          light(location.hash.slice(1));
+        }
+      })();
+    </script>
+  </body>
+</html>
