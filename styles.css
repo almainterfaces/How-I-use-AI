@@ -122,6 +122,19 @@ h1 {
   margin: 0 0 40px;
 }
 
+header.mast .lede {
+  margin-bottom: 16px;
+}
+
+.byline {
+  font-family: var(--mono);
+  font-size: var(--text-caption);
+  font-weight: 400;
+  color: var(--faint);
+  line-height: 1.5;
+  margin: 0 0 40px;
+}
+
 .who-title {
   font-family: var(--mono);
   font-size: var(--text-label);
